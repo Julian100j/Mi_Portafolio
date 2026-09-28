@@ -11,9 +11,9 @@ export default function ProjectCard({ project }) {
         <p>{project.description}</p>
         <ul className="tags" aria-label="Tecnologías">{project.technologies.map((tech) => <li key={tech}>{tech}</li>)}</ul>
         <div className="project-links">
-          {project.codeUrl ? <a href={project.codeUrl} target="_blank" rel="noreferrer"><Github size={17} /> Código</a> : <span title="Agrega la URL en projects.js"><LockKeyhole size={16} /> URL por configurar</span>}
+          {project.codeUrl ? <a href={project.codeUrl} target="_blank" rel="noreferrer"><Github size={17} /> Código</a> : <span title="Este proyecto todavía no tiene un repositorio público"><LockKeyhole size={16} /> Repositorio no publicado</span>}
           {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer">Ver proyecto <ArrowUpRight size={17} /></a>}
-          {unavailable && <span className="sr-only">Los enlaces de este proyecto aún no están configurados.</span>}
+          {unavailable && <span className="sr-only">Este proyecto no tiene enlaces públicos disponibles.</span>}
         </div>
       </div>
     </article>

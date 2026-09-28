@@ -9,9 +9,9 @@ export default function GitHubSection() {
   return (
     <section className="section section-pad github-section" id="github">
       <div className="container">
-        <SectionTitle number="04" eyebrow="Código abierto" title="Actividad que habla por el trabajo." description="Conexión preparada con la API pública de GitHub, sin tokens ni credenciales privadas." />
+        <SectionTitle number="04" eyebrow="Código abierto" title="Actividad que habla por el trabajo." description="Consulta mi actividad y repositorios públicos de GitHub, sin exponer tokens ni credenciales privadas." />
         {loading && <div className="github-skeleton" aria-label="Cargando datos de GitHub"><span /><span /><span /></div>}
-        {!loading && error && <Reveal className="github-empty"><Github size={34} /><div><h3>GitHub listo para conectar</h3><p>{error}</p></div></Reveal>}
+        {!loading && error && <Reveal className="github-empty"><Github size={34} /><div><h3>No fue posible cargar GitHub</h3><p>{error}</p></div></Reveal>}
         {!loading && githubProfile && <Reveal className="github-panel">
           <div className="github-profile">
             <img src={githubProfile.avatar_url} alt={`Avatar de ${githubProfile.login}`} width="88" height="88" loading="lazy" />

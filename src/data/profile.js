@@ -10,8 +10,8 @@ export const profile = {
   bio: 'Soy estudiante de Ingeniería de Sistemas con interés en crear productos digitales claros, confiables y centrados en las personas. Disfruto conectar el desarrollo de software con los datos y la inteligencia artificial para resolver problemas reales.',
   objective: 'Busco una oportunidad para aportar en equipos de tecnología, aprender de retos reales y seguir fortaleciendo mi criterio como ingeniero de sistemas.',
   stats: [
-    { value: '6+', label: 'Proyectos configurables' },
+    { value: '5', label: 'Proyectos destacados' },
     { value: '20+', label: 'Tecnologías' },
-    { value: '6', label: 'Áreas de interés' },
+    { value: '4', label: 'Áreas de interés' },
   ],
 };

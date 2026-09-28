@@ -1,6 +1,6 @@
-# Portafolio profesional — Ingeniería de Sistemas
+# Portafolio profesional de Julian Andres Ceballos Eraso
 
-Portafolio web responsive para presentar perfil, habilidades, proyectos, actividad pública de GitHub, trayectoria, certificados y medios de contacto. El contenido personal está centralizado como placeholders para evitar publicar información inventada o sensible.
+Portafolio web para presentar mi perfil como estudiante de Ingeniería de Sistemas, mis proyectos académicos y personales, habilidades técnicas, actividad pública de GitHub, formación y certificados.
 
 ## Tecnologías
 
@@ -8,9 +8,20 @@ Portafolio web responsive para presentar perfil, habilidades, proyectos, activid
 - Tailwind CSS 4
 - Framer Motion
 - Lucide React
-- API pública de GitHub (sin token)
+- API pública de GitHub sin token
 
-## Instalación y ejecución
+## Contenido
+
+- Perfil profesional y áreas de interés
+- Habilidades organizadas por categorías
+- Cinco proyectos de desarrollo web, backend e inteligencia artificial
+- Actividad y repositorios públicos de GitHub
+- Formación académica y participación en investigación
+- Certificados en PDF
+- Formulario de contacto mediante el cliente de correo del visitante
+- CV descargable en PDF
+
+## Instalación
 
 Requiere Node.js 20 o superior.
 
@@ -26,57 +37,43 @@ pnpm install
 pnpm dev
 ```
 
-Para verificar la versión de producción:
+## Verificación
 
 ```bash
+npm run lint
 npm run build
 npm run preview
 ```
-
-## Personalización
-
-1. Reemplaza los datos principales en `src/data/profile.js`.
-2. Agrega URLs reales en `src/data/projects.js`.
-3. Actualiza formación, experiencia y certificados en sus respectivos archivos dentro de `src/data/`.
-4. Para mostrar un certificado, copia su PDF dentro de `public/certificados/` y escribe su ruta pública en `pdfUrl`. Ejemplo: `pdfUrl: '/certificados/excel-2016.pdf'`.
-5. Copia el CV como `public/TU_CV.pdf` o cambia `cvPath`.
-6. Integra el formulario con Formspree, EmailJS o un backend propio en `src/sections/Contact.jsx`.
-7. Actualiza los metadatos de `index.html` antes del despliegue.
-
-Los valores que empiezan por `TU_` son placeholders intencionales.
 
 ## Estructura
 
 ```text
 src/
 ├── components/   # Componentes reutilizables
-├── data/         # Contenido editable
+├── data/         # Perfil, proyectos, habilidades y trayectoria
 ├── hooks/        # Tema e integración con GitHub
 ├── sections/     # Secciones principales del portafolio
-├── styles/       # Sistema visual y responsive
+├── styles/       # Sistema visual y diseño responsive
 ├── App.jsx
 └── main.jsx
 ```
 
-## Capturas
+Los certificados y el CV se encuentran dentro de `public/`. La información principal se administra desde los archivos de `src/data/`.
 
-La vista puede revisarse localmente con `npm run dev`. Agrega aquí capturas finales después de sustituir los placeholders por información real para que el README no muestre datos ficticios.
+## Despliegue
 
-## Despliegue en Vercel
-
-Importa el repositorio en Vercel. El framework se detecta como Vite y la salida de producción es `dist`. No se requieren variables de entorno para la integración pública de GitHub.
+El proyecto está preparado para desplegarse en Vercel. El framework es Vite y la carpeta de salida de producción es `dist`.
 
 ## Seguridad
 
-- No se incluyen tokens ni credenciales.
-- `.env` está ignorado por Git.
-- Los parámetros usados en la consulta pública de GitHub se codifican antes de construir la URL.
-- El formulario valida los datos en el navegador y no realiza envíos hasta configurar un proveedor.
+- No se incluyen tokens ni credenciales privadas.
+- Los archivos de entorno están ignorados por Git.
+- La integración utiliza únicamente la API pública de GitHub.
+- El formulario de contacto abre el cliente de correo del visitante y no almacena información.
 
 ## Autor
 
-`TU_NOMBRE` — reemplaza este valor y los enlaces sociales antes de publicar.
+Julian Andres Ceballos Eraso
 
-## Licencia
-
-Este proyecto puede distribuirse bajo la licencia MIT. Añade un archivo `LICENSE` si decides publicarlo con esa licencia.
+- GitHub: [Julian100j](https://github.com/Julian100j)
+- LinkedIn: [julian-andres-ceballos-eraso](https://www.linkedin.com/in/julian-andres-ceballos-eraso/)

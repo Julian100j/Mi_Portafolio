@@ -15,7 +15,7 @@ export default function Hero() {
             <a className="button button-primary" href="#proyectos">Ver proyectos <ArrowDownRight size={18} /></a>
             <a className="button button-ghost" href={`https://github.com/${profile.githubUsername}`} target="_blank" rel="noreferrer"><Github size={18} /> GitHub</a>
             <a className="icon-button" href={`https://linkedin.com/in/${profile.linkedinUsername}`} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
-            <a className="icon-button" href={profile.cvPath} download aria-label="Descargar CV"><Download size={20} /></a>
+            <a className="button button-ghost" href={profile.cvPath} download aria-label="Descargar hoja de vida"><Download size={18} /> Hoja de vida</a>
           </div>
         </motion.div>
         <motion.div className="terminal-card" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.65, delay: 0.15 }} aria-label="Resumen profesional">

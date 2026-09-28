@@ -24,13 +24,15 @@ export default function Contact() {
     const validationErrors = validate(form);
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length) { setStatus('Revisa los campos marcados.'); return; }
-    setStatus('Formulario validado. Configura Formspree o EmailJS en Contact.jsx para enviarlo.');
-    setForm(initialForm);
+    const subject = encodeURIComponent(form.subject.trim());
+    const body = encodeURIComponent(`Nombre: ${form.name.trim()}\nCorreo: ${form.email.trim()}\n\n${form.message.trim()}`);
+    setStatus('Abriendo tu aplicación de correo…');
+    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
   };
   return (
     <section className="section section-pad contact-section" id="contacto">
       <div className="container">
-        <SectionTitle number="07" eyebrow="Contacto" title="¿Construimos algo que importe?" description="Estoy abierta a conversar sobre prácticas, proyectos, colaboraciones y oportunidades de aprendizaje." />
+        <SectionTitle number="07" eyebrow="Contacto" title="¿Construimos algo que importe?" description="Estoy abierto a conversar sobre prácticas, proyectos, colaboraciones y oportunidades de aprendizaje." />
         <div className="contact-grid">
           <Reveal className="contact-details">
             <h3>Encuéntrame aquí</h3>
@@ -47,7 +49,7 @@ export default function Contact() {
               </div>
               <label>Asunto<input name="subject" value={form.subject} onChange={update} aria-invalid={Boolean(errors.subject)} aria-describedby={errors.subject ? 'subject-error' : undefined} placeholder="¿Sobre qué quieres conversar?" />{errors.subject && <small id="subject-error" className="field-error">{errors.subject}</small>}</label>
               <label>Mensaje<textarea name="message" rows="6" value={form.message} onChange={update} aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} placeholder="Cuéntame un poco sobre la oportunidad o el proyecto…" />{errors.message && <small id="message-error" className="field-error">{errors.message}</small>}</label>
-              <div className="form-submit"><button className="button button-primary" type="submit">Validar mensaje <Send size={17} /></button><p role="status" aria-live="polite">{status}</p></div>
+              <div className="form-submit"><button className="button button-primary" type="submit">Enviar mensaje <Send size={17} /></button><p role="status" aria-live="polite">{status}</p></div>
             </form>
           </Reveal>
         </div>

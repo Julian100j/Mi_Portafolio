@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <section className="section section-pad" id="proyectos">
       <div className="container">
-        <SectionTitle number="03" eyebrow="Trabajo seleccionado" title="Proyectos con intención, no solo código." description="Casos iniciales listos para reemplazar por tus proyectos reales. Los enlaces permanecen desactivados hasta que los configures." />
+        <SectionTitle number="03" eyebrow="Trabajo seleccionado" title="Proyectos con intención, no solo código." description="Una selección de proyectos académicos y personales en desarrollo web, backend e inteligencia artificial." />
         <div className="filter-list" role="group" aria-label="Filtrar proyectos">
           {projectCategories.map((category) => <button type="button" key={category} className={filter === category ? 'active' : ''} aria-pressed={filter === category} onClick={() => setFilter(category)}>{category}</button>)}
         </div>
