@@ -1,9 +1,9 @@
 export const experience = [
   {
     period: '2026',
-    title: 'Proyecto académico destacado',
+    title: 'Proyecto de grado: Enfoque basado en la detección de rasgos morfológicos con redes neuronales livianas para la optimización de la eficiencia operativa en sistemas de reconocimiento facial',
     organization: 'Universidad Mariana',
-    description: 'Desarrollo del proyecto de grado en el que se aplicaron conocimientos en el campo de Visión por computadora, modelos CNN y redes neuronales convolucionales para la clasificación de imágenes. Se implementaron técnicas de preprocesamiento de datos, entrenamiento de modelos y evaluación de resultados.',
+    description: 'Propuesta de reconocimiento facial basada en la detección de rasgos morfológicos y redes neuronales livianas, orientada a reducir la carga computacional y aplicada al registro de asistencia estudiantil.',
     tags: ['Trabajo en equipo', 'Desarrollo', 'Documentación'],
   },
   {
